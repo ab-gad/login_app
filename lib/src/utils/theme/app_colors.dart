@@ -8,8 +8,11 @@ final class AppColors {
 
   //dark mode colors
   static const dark = _AppColor(
-    primary: Color(0xff272526),
-  );
+      primary: Color(0xff272526),
+      onboardingPage1Color: Color(0xff272526),
+      onboardingPage2Color: Color.fromARGB(255, 63, 44, 45),
+      onboardingPage3Color: Color.fromARGB(255, 68, 54, 41),
+      onboardingPage4Color: Color.fromARGB(255, 49, 32, 54));
 }
 
 class _AppColor {
@@ -24,6 +27,7 @@ class _AppColor {
   final Color onboardingPage1Color;
   final Color onboardingPage2Color;
   final Color onboardingPage3Color;
+  final Color onboardingPage4Color;
 
   const _AppColor({
     required this.primary,
@@ -35,5 +39,6 @@ class _AppColor {
     this.onboardingPage1Color = Colors.white,
     this.onboardingPage2Color = const Color(0xfffddcdf),
     this.onboardingPage3Color = const Color(0xffffdcbd),
+    this.onboardingPage4Color = const Color.fromARGB(255, 239, 205, 248),
   });
 }

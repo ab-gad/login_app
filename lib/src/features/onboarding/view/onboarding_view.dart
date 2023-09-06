@@ -3,7 +3,7 @@ import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:login_app/src/features/login/view/login_veiw.dart';
 import 'package:login_app/src/features/onboarding/model/onboarding_page.dart';
 import 'package:login_app/src/features/onboarding/onboarding_constants.dart';
-import 'package:login_app/src/features/onboarding/view/onboarding_page.dart';
+import 'package:login_app/src/features/onboarding/view/widgets/onboarding_page.dart';
 import 'package:login_app/src/utils/theme/app_colors.dart';
 import 'package:login_app/src/utils/theme/app_padding.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -115,8 +115,8 @@ class _OnboardingViewState extends State<OnboardingView> {
             child: TextButton(
               onPressed: () {
                 _controller.jumpToPage(page: 3);
-                // Navigator.of(context).pushReplacement(
-                // MaterialPageRoute(builder: (_) => const LoginView()));
+                Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (_) => const LoginView()));
               },
               child: const Text(OnboardingConstants.skip),
             ),

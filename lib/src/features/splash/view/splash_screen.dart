@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:login_app/src/constants/app_string.dart';
 import 'package:login_app/src/features/onboarding/view/onboarding_view.dart';
+import 'package:login_app/src/features/onboarding/view/welcome_view.dart';
 import 'package:login_app/src/features/splash/splash_constants.dart';
 import 'package:login_app/src/utils/theme/app_padding.dart';
 
@@ -35,7 +36,8 @@ class _SplashViewState extends State<SplashView> {
     //ToDo: go to onboarding or login
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (_) => const OnboardingView(),
+        builder: (_) => const WelcomeView(),
+        // builder: (_) => const OnboardingView(),
       ),
     );
   }

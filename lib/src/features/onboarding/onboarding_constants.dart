@@ -4,6 +4,7 @@ final class OnboardingConstants {
   static const onboardingImage2 = 'assets/images/onboarding_logo2.svg';
   static const onboardingImage3 = 'assets/images/onboarding_logo3.svg';
   static const onboardingImage4 = 'assets/images/onboarding_logo4.svg';
+  static const welcomeImage = 'assets/images/welcome.png';
 
   // strings
   static const skip = "Skip";
@@ -20,4 +21,9 @@ final class OnboardingConstants {
   static const sliderSubTitle3 =
       "Here we go !!, You will make it, Only 1 step away from greatness";
   static const sliderSubTitle4 = "Foooooooooooooooool XD";
+
+  // welcome view
+  static const welcomeTitle = 'Welcome Onboard';
+  static const welcomeMsg =
+      'Glad to have you onboard, Great things about to come';
 }

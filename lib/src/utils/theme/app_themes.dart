@@ -9,13 +9,18 @@ final class AppThemes {
     fontFamily: AppFont.fontFamily,
     useMaterial3: true,
     brightness: Brightness.light,
-    colorScheme: ColorScheme.fromSeed(
-      seedColor: Colors.yellow,
-    ),
+    // colorScheme: ColorScheme.fromSeed(
+    //   seedColor: Colors.yellow,
+    // ),
     textTheme: AppTextTheme.lightTextTheme,
     primaryColor: AppColors.primary,
+    colorScheme:
+        const ColorScheme.light(primary: Color.fromARGB(255, 4, 156, 183)),
     elevatedButtonTheme: AppButtonTheme.elevatedButtonLightTheme,
     outlinedButtonTheme: AppButtonTheme.outlinedButtonLightTheme,
+    inputDecorationTheme: const InputDecorationTheme(
+      border: OutlineInputBorder(),
+    ),
   );
 
   static final ThemeData darkTheme = ThemeData(
@@ -25,9 +30,13 @@ final class AppThemes {
     textTheme: AppTextTheme.darkTextTheme,
     primaryColor: AppColors.primary,
     colorScheme: ColorScheme.dark(
+      primary: AppColors.primary,
       background: AppColors.dark.bgPrimary,
     ),
     elevatedButtonTheme: AppButtonTheme.elevatedButtonDarkTheme,
     outlinedButtonTheme: AppButtonTheme.outlinedButtonDarkTheme,
+    inputDecorationTheme: const InputDecorationTheme(
+      border: OutlineInputBorder(),
+    ),
   );
 }

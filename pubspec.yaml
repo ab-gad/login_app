@@ -54,6 +54,7 @@ flutter:
   assets:
     - assets/images/splash.png
     - assets/images/welcome.png
+    - assets/images/google-logo.png
     - assets/images/onboarding_logo2.svg
     - assets/images/onboarding_logo1.svg
     - assets/images/onboarding_logo3.svg

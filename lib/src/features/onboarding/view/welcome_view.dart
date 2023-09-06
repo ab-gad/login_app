@@ -52,7 +52,7 @@ class WelcomeView extends StatelessWidget {
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (_) => const RegistrationView(),
+                              builder: (_) => const LoginView(),
                             ),
                           );
                         },
@@ -67,7 +67,7 @@ class WelcomeView extends StatelessWidget {
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (_) => const LoginView(),
+                              builder: (_) => const RegistrationView(),
                             ),
                           );
                         },

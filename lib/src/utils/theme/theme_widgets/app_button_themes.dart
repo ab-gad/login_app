@@ -10,9 +10,15 @@ final class AppButtonTheme {
     style: ElevatedButton.styleFrom(
       backgroundColor: AppColors.white,
       foregroundColor: AppColors.black,
-      shape: const BeveledRectangleBorder(),
-      padding: const EdgeInsets.all(
-        AppPadding.mediumPadding * 3,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(
+            5,
+          ),
+        ),
+      ),
+      padding: const EdgeInsets.symmetric(
+        vertical: AppPadding.mediumPadding * 4,
       ),
       textStyle: const TextStyle(
         fontSize: _buttonDefaultTextSize,
@@ -23,9 +29,15 @@ final class AppButtonTheme {
     style: ElevatedButton.styleFrom(
       backgroundColor: AppColors.black,
       foregroundColor: AppColors.white,
-      shape: const BeveledRectangleBorder(),
-      padding: const EdgeInsets.all(
-        _buttonDefaultPadding,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(
+            5,
+          ),
+        ),
+      ),
+      padding: const EdgeInsets.symmetric(
+        vertical: AppPadding.mediumPadding * 4,
       ),
       textStyle: const TextStyle(
         fontSize: _buttonDefaultTextSize,
@@ -35,9 +47,15 @@ final class AppButtonTheme {
   static final outlinedButtonDarkTheme = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
       foregroundColor: AppColors.white,
-      shape: const BeveledRectangleBorder(),
-      padding: const EdgeInsets.all(
-        AppPadding.mediumPadding * 3,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(
+            5,
+          ),
+        ),
+      ),
+      padding: const EdgeInsets.symmetric(
+        vertical: AppPadding.mediumPadding * 4,
       ),
       textStyle: const TextStyle(
         fontSize: _buttonDefaultTextSize,
@@ -47,9 +65,15 @@ final class AppButtonTheme {
   static final outlinedButtonLightTheme = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
       foregroundColor: AppColors.black,
-      shape: const BeveledRectangleBorder(),
-      padding: const EdgeInsets.all(
-        _buttonDefaultPadding,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(
+            5,
+          ),
+        ),
+      ),
+      padding: const EdgeInsets.symmetric(
+        vertical: AppPadding.mediumPadding * 4,
       ),
       textStyle: const TextStyle(
         fontSize: _buttonDefaultTextSize,

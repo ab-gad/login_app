@@ -14,7 +14,12 @@ class OnboardingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(AppPadding.defaultScreenPadding),
+      padding: const EdgeInsets.fromLTRB(
+        AppPadding.defaultScreenPadding,
+        AppPadding.defaultScreenPadding * 3,
+        AppPadding.defaultScreenPadding,
+        AppPadding.defaultScreenPadding * 7,
+      ),
       color: pageData.bgColor,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -27,17 +32,25 @@ class OnboardingPage extends StatelessWidget {
             children: [
               Text(
                 pageData.title,
-                style: Theme.of(context).textTheme.headlineLarge,
+                style: Theme.of(context).textTheme.titleLarge,
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(
+                height: AppPadding.smallPadding,
               ),
               Text(
                 pageData.subTitle,
                 style: Theme.of(context).textTheme.bodyLarge,
+                textAlign: TextAlign.center,
               ),
             ],
           ),
           Text(
             pageData.counter,
           ),
+          // const SizedBox(
+          //   height: 40,
+          // )
         ],
       ),
     );

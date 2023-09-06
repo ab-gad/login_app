@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_app/src/utils/theme/app_colors.dart';
 import 'package:login_app/src/utils/theme/app_fonts.dart';
 import 'package:login_app/src/utils/theme/theme_widgets/app_text_theme.dart';
 
@@ -9,6 +10,7 @@ final class AppThemes {
     brightness: Brightness.light,
     colorScheme: ColorScheme.fromSeed(seedColor: Colors.yellow),
     textTheme: AppTextTheme.lightTextTheme,
+    primaryColor: AppColors.primary,
   );
 
   static final ThemeData darkTheme = ThemeData(
@@ -16,5 +18,6 @@ final class AppThemes {
     useMaterial3: true,
     brightness: Brightness.dark,
     textTheme: AppTextTheme.darkTextTheme,
+    primaryColor: AppColors.primary,
   );
 }

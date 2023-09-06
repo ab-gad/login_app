@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 
 final class AppColors {
+  // static colors (not relate to the theme mode)
+  static const white = Colors.white;
+  static const black = Colors.black;
+  static const primary = Color(0xffffE400);
+
   //light mode colors
   static const light = _AppColor(
-    primary: Color(0xffffE400),
+    bgPrimary: Color(0xffffE400),
   );
 
   //dark mode colors
   static const dark = _AppColor(
-      primary: Color(0xff272526),
+      bgPrimary: Color(0xff272526),
       onboardingPage1Color: Color(0xff272526),
       onboardingPage2Color: Color.fromARGB(255, 63, 44, 45),
       onboardingPage3Color: Color.fromARGB(255, 68, 54, 41),
@@ -16,11 +21,9 @@ final class AppColors {
 }
 
 class _AppColor {
-  final Color primary;
+  final Color bgPrimary;
   final Color secondary;
   final Color accent;
-  final Color white;
-  final Color black;
   final Color cardBg;
 
   //onboarding page
@@ -30,11 +33,9 @@ class _AppColor {
   final Color onboardingPage4Color;
 
   const _AppColor({
-    required this.primary,
+    required this.bgPrimary,
     this.secondary = const Color(0xff272727),
     this.accent = const Color(0x001bff),
-    this.white = Colors.white,
-    this.black = Colors.black,
     this.cardBg = const Color(0xff7f6f1),
     this.onboardingPage1Color = Colors.white,
     this.onboardingPage2Color = const Color(0xfffddcdf),

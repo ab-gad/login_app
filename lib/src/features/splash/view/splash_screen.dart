@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:login_app/src/constants/app_string.dart';
 import 'package:login_app/src/features/onboarding/view/onboarding_view.dart';
 import 'package:login_app/src/features/splash/splash_constants.dart';
-import 'package:login_app/src/utils/theme/app_colors.dart';
 import 'package:login_app/src/utils/theme/app_padding.dart';
 
 class SplashView extends StatefulWidget {
@@ -58,7 +57,7 @@ class _SplashViewState extends State<SplashView> {
                 height: SplashConstants.topCircleDiameter,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: AppColors.light.primary,
+                  color: Theme.of(context).primaryColor,
                 ),
               ),
             ),
@@ -122,7 +121,7 @@ class _SplashViewState extends State<SplashView> {
             child: Container(
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: AppColors.light.primary,
+                color: Theme.of(context).primaryColor,
               ),
             ),
           ),

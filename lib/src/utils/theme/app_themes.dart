@@ -13,6 +13,7 @@ final class AppThemes {
     //   seedColor: Colors.yellow,
     // ),
     textTheme: AppTextTheme.lightTextTheme,
+    cardColor: AppColors.light.cardBg,
     primaryColor: AppColors.primary,
     colorScheme:
         const ColorScheme.light(primary: Color.fromARGB(255, 4, 156, 183)),
@@ -29,6 +30,7 @@ final class AppThemes {
     brightness: Brightness.dark,
     textTheme: AppTextTheme.darkTextTheme,
     primaryColor: AppColors.primary,
+    cardColor: AppColors.dark.cardBg,
     colorScheme: ColorScheme.dark(
       primary: AppColors.primary,
       background: AppColors.dark.bgPrimary,

@@ -8,11 +8,13 @@ final class AppColors {
 
   //light mode colors
   static const light = _AppColor(
+    cardBg: Colors.black12,
     bgPrimary: Color(0xffffE400),
   );
 
   //dark mode colors
   static const dark = _AppColor(
+      cardBg: Colors.white12,
       bgPrimary: Color(0xff272526),
       onboardingPage1Color: Color(0xff272526),
       onboardingPage2Color: Color.fromARGB(255, 63, 44, 45),

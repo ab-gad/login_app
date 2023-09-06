@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:login_app/src/constants/app_string.dart';
+import 'package:login_app/src/features/forgot_password/forgot_password_constants.dart';
+import 'package:login_app/src/features/forgot_password/view/forgot_password_view.dart';
 import 'package:login_app/src/features/login/login_constants.dart';
 import 'package:login_app/src/features/onboarding/onboarding_constants.dart';
+import 'package:login_app/src/features/registeration/registration_constants.dart';
 import 'package:login_app/src/utils/theme/app_padding.dart';
 
 class LoginView extends StatefulWidget {
@@ -68,7 +71,126 @@ class _LoginViewState extends State<LoginView> {
                             padding: const EdgeInsets.symmetric(
                                 vertical: AppPadding.mediumPadding),
                             child: TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                showModalBottomSheet(
+                                    context: context,
+                                    builder: (_) {
+                                      return SingleChildScrollView(
+                                        child: Container(
+                                          padding: const EdgeInsets.all(
+                                            AppPadding.defaultScreenPadding,
+                                          ),
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              const SizedBox(
+                                                height: AppPadding
+                                                    .defaultScreenPadding,
+                                              ),
+                                              // title
+                                              Text(
+                                                ForgotPasswordConstants
+                                                    .optionsModalTitle,
+                                                style: Theme.of(context)
+                                                    .textTheme
+                                                    .displaySmall,
+                                              ),
+                                              Text(
+                                                ForgotPasswordConstants
+                                                    .optionsModalMsg,
+                                                style: Theme.of(context)
+                                                    .textTheme
+                                                    .titleMedium,
+                                              ),
+
+                                              const SizedBox(
+                                                height: AppPadding
+                                                    .defaultScreenPadding,
+                                              ),
+                                              ListTile(
+                                                onTap: () {
+                                                  Navigator.of(context).pop();
+                                                  Navigator.of(context).push(
+                                                    MaterialPageRoute(
+                                                      builder: (_) =>
+                                                          const ForgotPasswordView(),
+                                                    ),
+                                                  );
+                                                },
+                                                shape: RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            5)),
+                                                tileColor:
+                                                    Theme.of(context).cardColor,
+                                                contentPadding: const EdgeInsets
+                                                    .all(AppPadding
+                                                        .defaultScreenPadding),
+                                                leading: const Icon(
+                                                  Icons.email,
+                                                  size: 60,
+                                                ),
+                                                title: Text(
+                                                  "E-Mail",
+                                                  style: Theme.of(context)
+                                                      .textTheme
+                                                      .titleLarge,
+                                                ),
+                                                subtitle: Text(
+                                                  ForgotPasswordConstants
+                                                      .resetViaEmailVerification,
+                                                  style: Theme.of(context)
+                                                      .textTheme
+                                                      .bodyLarge,
+                                                ),
+                                              ),
+                                              const SizedBox(
+                                                height: AppPadding
+                                                    .defaultScreenPadding,
+                                              ),
+                                              ListTile(
+                                                onTap: () {
+                                                  Navigator.of(context).pop();
+                                                  Navigator.of(context).push(
+                                                    MaterialPageRoute(
+                                                      builder: (_) =>
+                                                          const ForgotPasswordView(),
+                                                    ),
+                                                  );
+                                                },
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(5),
+                                                ),
+                                                tileColor:
+                                                    Theme.of(context).cardColor,
+                                                contentPadding: const EdgeInsets
+                                                    .all(AppPadding
+                                                        .defaultScreenPadding),
+                                                leading: const Icon(
+                                                  Icons.ad_units_rounded,
+                                                  size: 60,
+                                                ),
+                                                title: Text(
+                                                  RegistrationConstants.phoneNo,
+                                                  style: Theme.of(context)
+                                                      .textTheme
+                                                      .titleLarge,
+                                                ),
+                                                subtitle: Text(
+                                                    ForgotPasswordConstants
+                                                        .resetViaPhoneVerification,
+                                                    style: Theme.of(context)
+                                                        .textTheme
+                                                        .bodyLarge),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      );
+                                    });
+                              },
                               child: const Text(
                                 LoginConstants.forgotPassword,
                               ),

@@ -1,4 +1,4 @@
-final class LoginConstants {
+abstract class LoginConstants {
   // Assets
   static const googleLogo = 'assets/images/google-logo.png';
 

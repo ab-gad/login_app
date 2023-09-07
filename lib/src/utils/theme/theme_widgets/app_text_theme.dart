@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-final class AppTextTheme {
+abstract class AppTextTheme {
   static const lightTextTheme = TextTheme(
     //* displays
     displaySmall: TextStyle(fontWeight: FontWeight.w700),

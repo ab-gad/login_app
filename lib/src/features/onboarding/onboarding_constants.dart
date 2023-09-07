@@ -1,4 +1,4 @@
-final class OnboardingConstants {
+abstract class OnboardingConstants {
   // assets
   static const onboardingImage1 = 'assets/images/onboarding_logo1.svg';
   static const onboardingImage2 = 'assets/images/onboarding_logo2.svg';

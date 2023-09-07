@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../app_colors.dart';
 import '../app_padding.dart';
 
-final class AppButtonTheme {
+abstract class AppButtonTheme {
   static const _buttonDefaultTextSize = 18.0;
   static const _buttonDefaultPadding = 15.0;
   static final elevatedButtonDarkTheme = ElevatedButtonThemeData(

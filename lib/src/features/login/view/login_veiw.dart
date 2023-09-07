@@ -6,6 +6,7 @@ import 'package:login_app/src/features/forgot_password/view/forgot_password_view
 import 'package:login_app/src/features/login/login_constants.dart';
 import 'package:login_app/src/features/onboarding/onboarding_constants.dart';
 import 'package:login_app/src/features/registeration/registration_constants.dart';
+import 'package:login_app/src/utils/app_routes.dart';
 import 'package:login_app/src/utils/theme/app_padding.dart';
 
 class LoginView extends StatefulWidget {
@@ -210,7 +211,9 @@ class _LoginViewState extends State<LoginView> {
                         SizedBox(
                           width: double.infinity,
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              AppRoute;
+                            },
                             child: const Text(
                               AppStrings.login,
                             ),

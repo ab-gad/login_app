@@ -4,7 +4,7 @@ import 'package:login_app/src/utils/theme/app_fonts.dart';
 import 'package:login_app/src/utils/theme/theme_widgets/app_button_themes.dart';
 import 'package:login_app/src/utils/theme/theme_widgets/app_text_theme.dart';
 
-final class AppThemes {
+abstract class AppThemes {
   static final ThemeData lightTheme = ThemeData(
     fontFamily: AppFont.fontFamily,
     useMaterial3: true,

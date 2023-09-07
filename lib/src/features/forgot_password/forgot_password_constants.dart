@@ -1,4 +1,4 @@
-final class ForgotPasswordConstants {
+abstract class ForgotPasswordConstants {
   //assets
   static const forgotPasswordImage = "assets/images/forgot-password.webp";
 

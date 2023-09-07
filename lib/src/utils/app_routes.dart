@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-final class AppRoute {
+abstract class AppRoute {
   static const splashView = '/';
   static const onboarding = '/onboarding';
   static const login = '/login';

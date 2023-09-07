@@ -1,4 +1,4 @@
-final class RegistrationConstants {
+abstract class RegistrationConstants {
   // Assets
   static const googleLogo = 'assets/images/google-logo.png';
 

@@ -3,6 +3,7 @@ import 'package:login_app/src/constants/app_string.dart';
 import 'package:login_app/src/features/login/view/login_veiw.dart';
 import 'package:login_app/src/features/onboarding/onboarding_constants.dart';
 import 'package:login_app/src/features/registeration/view/registeration_view.dart';
+import 'package:login_app/src/utils/app_routes.dart';
 import 'package:login_app/src/utils/theme/app_colors.dart';
 import 'package:login_app/src/utils/theme/app_padding.dart';
 
@@ -50,11 +51,13 @@ class WelcomeView extends StatelessWidget {
                     Expanded(
                       child: OutlinedButton(
                         onPressed: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (_) => const LoginView(),
-                            ),
-                          );
+                          AppRoute.createAnimatedRoute(
+                              context, const LoginView());
+                          // Navigator.of(context).push(
+                          //   MaterialPageRoute(
+                          //     builder: (_) => const LoginView(),
+                          //   ),
+                          // );
                         },
                         child: const Text(AppStrings.login),
                       ),

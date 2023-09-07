@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:login_app/src/features/splash/view/splash_screen.dart';
 import 'package:login_app/src/utils/theme/app_themes.dart';
 
@@ -12,11 +13,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      defaultTransition: Transition.leftToRightWithFade,
       theme: AppThemes.lightTheme,
       darkTheme: AppThemes.darkTheme,
       themeMode: ThemeMode.system,
+      transitionDuration: Duration(milliseconds: 400),
       home: const SplashView(),
     );
   }

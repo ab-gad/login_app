@@ -1,0 +1,4 @@
+enum ForgotPasswordOptions {
+  email,
+  phoneNo,
+}

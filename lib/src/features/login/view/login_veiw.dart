@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:login_app/src/constants/app_string.dart';
 import 'package:login_app/src/features/forgot_password/forgot_password_constants.dart';
+import 'package:login_app/src/features/forgot_password/forgot_password_option.enum.dart';
 import 'package:login_app/src/features/forgot_password/view/forgot_password_view.dart';
 import 'package:login_app/src/features/login/login_constants.dart';
 import 'package:login_app/src/features/onboarding/onboarding_constants.dart';
@@ -108,13 +109,17 @@ class _LoginViewState extends State<LoginView> {
                                                 height: AppPadding
                                                     .defaultScreenPadding,
                                               ),
+                                              // * E-mail Option
                                               ListTile(
                                                 onTap: () {
                                                   Navigator.of(context).pop();
                                                   Navigator.of(context).push(
                                                     MaterialPageRoute(
                                                       builder: (_) =>
-                                                          const ForgotPasswordView(),
+                                                          const ForgotPasswordView(
+                                                        ForgotPasswordOptions
+                                                            .email,
+                                                      ),
                                                     ),
                                                   );
                                                 },
@@ -149,13 +154,18 @@ class _LoginViewState extends State<LoginView> {
                                                 height: AppPadding
                                                     .defaultScreenPadding,
                                               ),
+
+                                              // * Phone No Option
                                               ListTile(
                                                 onTap: () {
                                                   Navigator.of(context).pop();
                                                   Navigator.of(context).push(
                                                     MaterialPageRoute(
                                                       builder: (_) =>
-                                                          const ForgotPasswordView(),
+                                                          const ForgotPasswordView(
+                                                        ForgotPasswordOptions
+                                                            .phoneNo,
+                                                      ),
                                                     ),
                                                   );
                                                 },

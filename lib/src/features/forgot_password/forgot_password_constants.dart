@@ -1,4 +1,8 @@
 final class ForgotPasswordConstants {
+  //assets
+  static const forgotPasswordImage = "assets/images/forgot-password.webp";
+
+  // strings
   static const optionsModalTitle = "Make Selection!";
   static const forgotPasswordTitle = "Forgot Password!";
   static const resetViaEmailVerification = "Reset via Email verification";

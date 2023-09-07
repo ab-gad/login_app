@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:login_app/src/features/forgot_password/forgot_password_constants.dart';
 import 'package:login_app/src/features/forgot_password/forgot_password_option.enum.dart';
+import 'package:login_app/src/features/forgot_password/view/forgot_password_otp_view.dart';
 import 'package:login_app/src/features/login/login_constants.dart';
 import 'package:login_app/src/features/onboarding/onboarding_constants.dart';
 import 'package:login_app/src/features/registeration/registration_constants.dart';
+import 'package:login_app/src/utils/app_routes.dart';
 import 'package:login_app/src/utils/theme/app_padding.dart';
 
 import '../../../constants/app_string.dart';
 
 class ForgotPasswordView extends StatelessWidget {
   final ForgotPasswordOptions option;
-  const ForgotPasswordView(this.option, {super.key});
+  final _emailController = TextEditingController(text: '');
+  final _phoneNumberController = TextEditingController(text: '');
+  ForgotPasswordView(this.option, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +63,16 @@ class ForgotPasswordView extends StatelessWidget {
                           SizedBox(
                             width: double.infinity,
                             child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                AppRoute.createAnimatedRoute(
+                                  context,
+                                  ForgotPasswordOtpView(
+                                    option == ForgotPasswordOptions.email
+                                        ? _emailController.value.text
+                                        : _phoneNumberController.value.text,
+                                  ),
+                                );
+                              },
                               child: const Text(
                                 AppStrings.submit,
                               ),
@@ -79,6 +93,7 @@ class ForgotPasswordView extends StatelessWidget {
   TextFormField _buildSelectedOptionFormField() {
     return switch (option) {
       ForgotPasswordOptions.email => TextFormField(
+          controller: _emailController,
           decoration: const InputDecoration(
             prefixIcon: Icon(Icons.email_outlined),
             hintText: LoginConstants.emailHint,
@@ -86,6 +101,7 @@ class ForgotPasswordView extends StatelessWidget {
           ),
         ),
       ForgotPasswordOptions.phoneNo => TextFormField(
+          controller: _phoneNumberController,
           decoration: const InputDecoration(
             prefixIcon: Icon(Icons.phone_android),
             hintText: RegistrationConstants.phoneNoHint,

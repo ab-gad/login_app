@@ -2,14 +2,34 @@ import 'package:flutter/material.dart';
 
 final class AppTextTheme {
   static const lightTextTheme = TextTheme(
-    headlineMedium: TextStyle(color: Colors.red),
+    //* displays
     displaySmall: TextStyle(fontWeight: FontWeight.w700),
-    titleMedium: TextStyle(fontWeight: FontWeight.w600),
+    displayLarge: TextStyle(fontWeight: FontWeight.w700, fontSize: 100),
+
+    //* headlines
+    headlineMedium: TextStyle(fontWeight: FontWeight.w600),
+    headlineSmall: TextStyle(fontWeight: FontWeight.w600),
+    headlineLarge: TextStyle(fontWeight: FontWeight.w600),
+
+    //* title
+    titleLarge: TextStyle(fontWeight: FontWeight.w500),
+    titleMedium: TextStyle(fontWeight: FontWeight.w500),
+    titleSmall: TextStyle(fontWeight: FontWeight.w500),
   );
 
   static const darkTextTheme = TextTheme(
-    headlineMedium: TextStyle(color: Colors.amber),
+    //* displays
     displaySmall: TextStyle(fontWeight: FontWeight.w700),
-    titleMedium: TextStyle(fontWeight: FontWeight.w600),
+    displayLarge: TextStyle(fontWeight: FontWeight.w700, fontSize: 100),
+
+    //* headlines
+    headlineMedium: TextStyle(fontWeight: FontWeight.w600),
+    headlineSmall: TextStyle(fontWeight: FontWeight.w600),
+    headlineLarge: TextStyle(fontWeight: FontWeight.w600),
+
+    //* title
+    titleLarge: TextStyle(fontWeight: FontWeight.w500),
+    titleMedium: TextStyle(fontWeight: FontWeight.w500),
+    titleSmall: TextStyle(fontWeight: FontWeight.w500),
   );
 }

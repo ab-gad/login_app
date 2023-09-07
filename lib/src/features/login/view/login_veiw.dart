@@ -116,7 +116,7 @@ class _LoginViewState extends State<LoginView> {
                                                   Navigator.of(context).push(
                                                     MaterialPageRoute(
                                                       builder: (_) =>
-                                                          const ForgotPasswordView(
+                                                          ForgotPasswordView(
                                                         ForgotPasswordOptions
                                                             .email,
                                                       ),
@@ -162,7 +162,7 @@ class _LoginViewState extends State<LoginView> {
                                                   Navigator.of(context).push(
                                                     MaterialPageRoute(
                                                       builder: (_) =>
-                                                          const ForgotPasswordView(
+                                                          ForgotPasswordView(
                                                         ForgotPasswordOptions
                                                             .phoneNo,
                                                       ),

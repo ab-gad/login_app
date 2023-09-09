@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_app/src/constants/app_string.dart';
+import 'package:login_app/src/features/dashbaord/view/dashbaord_view.dart';
 import 'package:login_app/src/features/forgot_password/forgot_password_constants.dart';
 import 'package:login_app/src/features/forgot_password/forgot_password_option.enum.dart';
 import 'package:login_app/src/features/forgot_password/view/forgot_password_view.dart';
@@ -212,7 +213,10 @@ class _LoginViewState extends State<LoginView> {
                           width: double.infinity,
                           child: ElevatedButton(
                             onPressed: () {
-                              AppRoute;
+                              AppRoute.createAnimatedRoute(
+                                context,
+                                DashboardView(),
+                              );
                             },
                             child: const Text(
                               AppStrings.login,

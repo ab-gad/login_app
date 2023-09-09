@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:login_app/src/features/splash/view/splash_screen.dart';
+import 'package:login_app/src/features/user_profile/view/user_profile_view.dart';
 import 'package:login_app/src/utils/theme/app_themes.dart';
 
 void main() {
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       darkTheme: AppThemes.darkTheme,
       themeMode: ThemeMode.system,
       transitionDuration: Duration(milliseconds: 400),
-      home: const SplashView(),
+      home: const UserProfileView(),
     );
   }
 }

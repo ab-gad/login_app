@@ -61,6 +61,7 @@ flutter:
     - assets/images/onboarding_logo1.svg
     - assets/images/onboarding_logo3.svg
     - assets/images/onboarding_logo4.svg
+    - assets/images/mask.jpg
 
     # dashboard assets
     - assets/images/user-profile.png
